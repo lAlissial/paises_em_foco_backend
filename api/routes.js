@@ -5,8 +5,15 @@ const router = express.Router();
 
 // Rota de exemplo para buscar todos os países
 router.get('/paises', async (req, res) => {
-  // res.setHeader('Content-Type', 'application/json');
-  // res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
+  res.setHeader('Access-Control-Allow-Credentials', true)
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  // another common pattern
+  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  )
 
   try {
     const client = await connectToDatabase();
@@ -60,6 +67,15 @@ router.get('/paises', async (req, res) => {
 
 // Rota para buscar todos os diferentes níveis de IDH do ano de 2021
 router.get('/niveis-idh-2021', async (req, res) => {
+  res.setHeader('Access-Control-Allow-Credentials', true)
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  // another common pattern
+  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  )
   try {
     const client = await connectToDatabase();
     const db = client.db('bdmpti');
@@ -87,6 +103,15 @@ router.get('/niveis-idh-2021', async (req, res) => {
 
 // Rota para buscar países por nível de IDH
 router.get('/paises-por-nivel-idh/:nivelidh', async (req, res) => {
+  res.setHeader('Access-Control-Allow-Credentials', true)
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  // another common pattern
+  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  )
   try {
     const client = await connectToDatabase();
     const db = client.db('bdmpti');
@@ -145,6 +170,15 @@ router.get('/paises-por-nivel-idh/:nivelidh', async (req, res) => {
 
 // Rota para buscar todos os diferentes continentes
 router.get('/todos-continentes', async (req, res) => {
+  res.setHeader('Access-Control-Allow-Credentials', true)
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  // another common pattern
+  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  )
   try {
     const client = await connectToDatabase();
     const db = client.db('bdmpti');
@@ -173,6 +207,15 @@ router.get('/todos-continentes', async (req, res) => {
 
 // Rota para buscar países por continente
 router.get('/paises-por-continente/:cont', async (req, res) => {
+  res.setHeader('Access-Control-Allow-Credentials', true)
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  // another common pattern
+  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  )
   try {
     const client = await connectToDatabase();
     const db = client.db('bdmpti');
@@ -231,6 +274,15 @@ router.get('/paises-por-continente/:cont', async (req, res) => {
 
 // Rota para buscar todos os diferentes continentes
 router.get('/todas-moedas', async (req, res) => {
+  res.setHeader('Access-Control-Allow-Credentials', true)
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  // another common pattern
+  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  )
   try {
     const client = await connectToDatabase();
     const db = client.db('bdmpti');
@@ -259,6 +311,15 @@ router.get('/todas-moedas', async (req, res) => {
 
 // Rota para buscar países por moeda
 router.get('/paises-por-moeda/:abrevmoeda', async (req, res) => {
+  res.setHeader('Access-Control-Allow-Credentials', true)
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  // another common pattern
+  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  )
   try {
     const client = await connectToDatabase();
     const db = client.db('bdmpti');
@@ -318,6 +379,15 @@ router.get('/paises-por-moeda/:abrevmoeda', async (req, res) => {
 
 // Rota para buscar países por língua
 router.get('/paises-por-lingua/:lingua', async (req, res) => {
+  res.setHeader('Access-Control-Allow-Credentials', true)
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  // another common pattern
+  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  )
   try {
     const client = await connectToDatabase();
     const db = client.db('bdmpti');
@@ -377,6 +447,15 @@ router.get('/paises-por-lingua/:lingua', async (req, res) => {
 
 // Rota para buscar países por estimativa populacional
 router.get('/paises-por-estimativa-populacional/:estpop', async (req, res) => {
+  res.setHeader('Access-Control-Allow-Credentials', true)
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  // another common pattern
+  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  )
   try {
     const client = await connectToDatabase();
     const db = client.db('bdmpti');

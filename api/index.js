@@ -12,3 +12,5 @@ app.use('/api', routes); // Define um prefixo para as rotas
 app.listen(port, () => {
   console.log(`Servidor iniciado na porta ${port}`);
 });
+
+module.exports = app;

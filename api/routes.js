@@ -5,6 +5,9 @@ const router = express.Router();
 
 // Rota de exemplo para buscar todos os países
 router.get('/paises', async (req, res) => {
+  // res.setHeader('Content-Type', 'application/json');
+  // res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
+
   try {
     const client = await connectToDatabase();
     const db = client.db('bdmpti');
